@@ -8,7 +8,7 @@ import Test.HUnit -- see http://hackage.haskell.org/package/HUnit for
 
 -- Test Cases
 
--- toRNA
+-- -- toRNA
 test1a = TestCase $ assertEqual "toRNA GATGGAACTTGACTACGTAAATT" "GAUGGAACUUGACUACGUAAAUU" (toRNA "GATGGAACTTGACTACGTAAATT")
 test1b = TestCase $ assertEqual "toRNA GATTACA" "GAUUACA" (toRNA "GATTACA")
 
@@ -27,4 +27,7 @@ test3e = TestCase $ assertEqual "collatz 27" 111 (collatz 27)
 
 -- for running all the tests (type "runTests" within GHCi -- without
 -- the quotes)
+
 runTests = runTestTT $ TestList [test1a, test1b, test2a, test2b, test2c, test2d, test3a, test3b, test3c, test3d, test3e]
+
+
